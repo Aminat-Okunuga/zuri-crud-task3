@@ -3,20 +3,20 @@ const mongoose = require("mongoose")
 
 
 //Structure of the database
-const userSchema = mongoose.Schema({
+const schema = mongoose.Schema({
     name: {
-        type:String
+        type: String,
     },
 
     email: {
-        type:String
+        type: String,
     },
 
     country: {
-        type:String
+        type: String,
     }
 })
 
 
-//connect to my online collection from  -env
-module.exports = mongoose.model("persons", userSchema)
+//connect to the online collection from  -env
+module.exports = mongoose.model("persons", schema)
